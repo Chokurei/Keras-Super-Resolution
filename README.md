@@ -1,7 +1,8 @@
-# Keras implementation of SRCNN
+# Keras implementation of Super Resolution
 
 ## Model: SRCNN
-The original paper is [ECCV2014: Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
+The original paper is [ECCV2014: Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)  
+![srcnn__1_](/uploads/14bfd601cecd49cd317eaea81f0c7974/srcnn__1_.png)
 
 ## Structure of directory
 ### sub directory
