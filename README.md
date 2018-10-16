@@ -3,7 +3,7 @@
 The original paper is [ECCV2014: Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
 ## Model: SRCNN
-![srcnn](/uploads/63ca58c3ade3935c87d7254a10537266/srcnn.png)
+![1_RxT4yZtXFkQ47Fe7huHe_w](/uploads/a3d41409c60f9441555eb61537281f83/1_RxT4yZtXFkQ47Fe7huHe_w.png)
 
 ## Structure of directory
 ### sub directory
