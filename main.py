@@ -136,7 +136,7 @@ def result_img_compare_save(images, path):
     for i in range(len(images)):
         plt.subplot(1, len(images), i+1)
         plt.title(titles[i])
-        plt.imshow(images[i])
+        plt.imshow(cv2.cvtColor(images[i], cv2.COLOR_BGR2RGB))
     plt.tight_layout()
     plt.savefig(path)
 
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     parser.add_argument('--result_stats_path', type=str, default="./logs/statistic/", help='trained model name')
 
     parser.add_argument('-t','--train_mode', type=lambda x: (str(x).lower() == 'true'), default=True, help='train the model or not')
-    parser.add_argument('-i','--nEpochs', type=int, required=True, help='number of epochs to train for')
+    parser.add_argument('-i','--nEpochs', type=int, default=2, help='number of epochs to train for')
     parser.add_argument('-u','--upscale_factor', type=int, default=2, help="super resolution upscale factor")
    
     opt = parser.parse_args()
