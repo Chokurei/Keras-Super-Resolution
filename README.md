@@ -93,11 +93,9 @@ optional arguments:
 | baboon | 23.1091089408  | 23.9472346226   |
 
 ### Visualization:
-![comic](/uploads/77e4cfcd8735acb23b044b9f4dcd7fdc/comic.png)
-
-![face](/uploads/dd7521d0d0e94cced8535a1325c81a22/face.png)
-
-![baboon](/uploads/933f4c906a1d20f9fec3d2fb50dcd8c0/baboon.png)
+comic![comic](/uploads/77e4cfcd8735acb23b044b9f4dcd7fdc/comic.png)  
+face![face](/uploads/dd7521d0d0e94cced8535a1325c81a22/face.png)  
+baboon![baboon](/uploads/933f4c906a1d20f9fec3d2fb50dcd8c0/baboon.png)
 
 License
 ----
