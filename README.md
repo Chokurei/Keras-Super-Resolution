@@ -34,16 +34,18 @@ geosr-keras
 
 ## Usage:
 ### Step 1: Data Preparation
-Create your own data directory, and prepare training and test dataset.  
+Create data directory, and prepare your own training and test dataset.  
 `cd ./data`  
 `mkdir train test`
 
 ### Step 2: Conduct 
 #### Train and Test
-`python main.py --model_name_train model_name -t True -i 10 -u 2`
+`python main.py --model_name_train model_name -t True -i 10 -u 2`  
+* Trained a model named model_name, and use it to test
 
 #### Test only
-`python main.py --model_name_predict model_name -t False -i 10 -u 2`
+`python main.py --model_name_predict model_name -t False -i 10 -u 2`  
+* Use trained model named model_name to test
 
 ### Help
 ```
