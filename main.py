@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Oct  8 17:14:05 2018
-
-@author: kaku
+@CreateTime:   2018-10-10T12:16:31+09:00
+@Email:  guozhilingty@gmail.com
+@Copyright: Chokurei
+@License: MIT
 """
 from keras.models import Sequential
 from keras.layers import Conv2D, Input, BatchNormalization
