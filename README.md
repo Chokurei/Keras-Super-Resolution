@@ -1,10 +1,9 @@
 # Keras implementation of SRCNN
 
-The original paper is [Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
+The original paper is [ECCV2014: Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
-## ESPCN
-CVPR2016: Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network
-![espcn](/uploads/0f6cf4b968ed5c2adce7efba861b4678/espcn.png)
+## Model: SRCNN
+![srcnn](/uploads/63ca58c3ade3935c87d7254a10537266/srcnn.png)
 
 ## Structure of directory
 ### sub directory
