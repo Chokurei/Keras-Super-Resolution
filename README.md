@@ -1,6 +1,7 @@
 # Keras implementation of SRCNN
 
-The original paper is [Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
+## Model: SRCNN
+The original paper is [ECCV2014: Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
 ## Structure of directory
 ### sub directory
@@ -22,21 +23,29 @@ geosr-keras
 └── result
     └──
 ```
+* prepare_data.py is an utils python script
+* model_zoo contains trained models
+* statistic contains statistic result such as PSNR for each test image
+* result contains obtained lr images, related sr images, and result comparison image
 
-My implementation have some difference with the original paper, include:
-
-* use Adam alghorithm for optimization, with learning rate 0.0003 for all layers.
-* Use the opencv library to produce the training data and test data, not the matlab library. This difference may caused some deteriorate on the final results.
-* I did not set different learning rate in different layer, but I found this network still work.
-* The color space of YCrCb in Matlab and OpenCV also have some difference. So if you want to compare your results with some academic paper, you may want to use the code written with matlab.
+## Prequirements
+* Keras                              2.1.6
+* tensorflow-gpu                     1.8.0
 
 ## Usage:
-### Create your own data directory, and prepare training and test dataset.
-`cd ./data`
+### Step 1: Data Preparation
+Create data directory, and prepare your own training and test dataset.  
+`cd ./data`  
 `mkdir train test`
 
-### Example:
-`python main.py -t True -i 100 -u 2`
+### Step 2: Conduct 
+#### Train and Test
+`python main.py --model_name_train model_name -t True -i 10 -u 2`  
+* Trained a model named model_name, and use it to test
+
+#### Test only
+`python main.py --model_name_predict model_name -t False -i 10 -u 2`  
+* Use trained model named model_name to test
 
 ### Help
 ```
@@ -74,6 +83,7 @@ optional arguments:
                         super resolution upscale factor
 ```
 
-## Result(training for 200 epoches on 91 images, with upscaling factor 2):
-Results on Set5 dataset:
-sdaad
+## Result(training for 100 epoches on 91 images, with upscaling factor 2):
+![comic](/uploads/f140eaddd2a92ea0b7fa4898ed831059/comic.png)  
+![face](/uploads/fa1de61e72fe25a246c42f503c4804cb/face.png)  
+![baboon](/uploads/9a52f805ca44e16948c1dbd0a79b8e84/baboon.png)
