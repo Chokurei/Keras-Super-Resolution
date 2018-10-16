@@ -1,11 +1,10 @@
 *.DS_Store
-data/*
+# data/*
 __pycache__/*
-logs/*
 other/*
 result/*
 reference/*
-checkpoint/*.pth
+# checkpoint/*.pth
 result/area/*
 models/__pycache__/*
 utils/__pycache__/*
