@@ -24,7 +24,7 @@ def prepare_train_data(_path, scale):
     data = []
     label = []
 
-    for i in range(nums):
+    for i in range(nums):   
         name = _path + names[i]
         hr_img = cv2.imread(name, cv2.IMREAD_COLOR)
         hr_img = cv2.cvtColor(hr_img, cv2.COLOR_BGR2YCrCb)
