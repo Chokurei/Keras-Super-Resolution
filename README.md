@@ -84,6 +84,18 @@ optional arguments:
 ```
 
 ## Result(training for 100 epoches on 91 images, with upscaling factor 2):
+# Geosr - A Computer Vision Package for Remote Sensing Image Super Resolution
+Image:PSNR            |  Low Resolution  |  Super Resolution
+:-------------------------:|:-------------------------:|:-------------------------:
+Image:comic            |  23.80  |  26.04
+:-------------------------:|:-------------------------:|:-------------------------:
+Image:face            |  32.79  |  33.94
+:-------------------------:|:-------------------------:|:-------------------------:
+Image:baboon            |  23.11  |  23.95
+
 ![comic](/uploads/f140eaddd2a92ea0b7fa4898ed831059/comic.png)  
 ![face](/uploads/fa1de61e72fe25a246c42f503c4804cb/face.png)  
 ![baboon](/uploads/9a52f805ca44e16948c1dbd0a79b8e84/baboon.png)
+
+
+
