@@ -67,7 +67,7 @@ def train(data, model_path, epochs):
     X_train, y_train, X_val, y_val = data
     X_train, X_val = np.transpose(X_train,(0,2,3,1)), np.transpose(X_val,(0,2,3,1))
     y_train, y_val = np.transpose(y_train,(0,2,3,1)), np.transpose(y_val,(0,2,3,1))
-    
+
     checkpoint = ModelCheckpoint(model_path, monitor='val_loss', verbose=1, save_best_only=True,
                                  save_weights_only=False, mode='min')
     callbacks_list = [checkpoint]
@@ -90,7 +90,7 @@ def predict(model, img_path, result_path):
 #        hr_img_name = name + '_hr' + form
         lr_img_name = name + '_lr' + form
         sr_img_name = name + '_sr' + form
-            
+
         img = cv2.imread(os.path.join(img_path, img_name), cv2.IMREAD_COLOR)
         img_hr = np.copy(img)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
@@ -101,7 +101,7 @@ def predict(model, img_path, result_path):
         img = cv2.cvtColor(img, cv2.COLOR_YCrCb2BGR)
         cv2.imwrite(os.path.join(result_path,lr_img_name), img)
         img_lr = np.copy(img)
-    
+
         Y = np.zeros((1, img.shape[0], img.shape[1], 1), dtype=float)
         Y[0, :, :, 0] = Y_img.astype(float) / 255.
         pre = srcnn_model.predict(Y, batch_size=1) * 255.
@@ -124,7 +124,7 @@ def predict(model, img_path, result_path):
 
         imgs = [img_hr, img_lr, img_sr]
         result_img_compare_save(imgs, os.path.join(result_path, name+'.png'))
-        
+
         names.append(name)
         bicubic.append(cv2.PSNR(im1, im2))
         SRCNN.append(cv2.PSNR(im1, im3))
@@ -146,7 +146,7 @@ def result_stats_save(stats, path):
     result = pd.DataFrame(stats).T
     result = result.rename(columns = {0:'name',1:'bicubic',2:'SRCNN'})
     result.to_csv(os.path.join(path,'stats.csv'))
-            
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Keras Super Res Example')
@@ -163,11 +163,10 @@ if __name__ == "__main__":
     parser.add_argument('-t','--train_mode', type=lambda x: (str(x).lower() == 'true'), default=True, help='train the model or not')
     parser.add_argument('-i','--nEpochs', type=int, default=2, help='number of epochs to train for')
     parser.add_argument('-u','--upscale_factor', type=int, default=2, help="super resolution upscale factor")
-   
+
     opt = parser.parse_args()
-    
+
     if opt.train_mode:
-        print('!!!!!!!!!!!!!!!!!!!!!!!!!!')
         print('===> Loading datasets')
         train_data, train_label = prepare_train_data(opt.train_data_path, opt.upscale_factor)
         print(train_data.shape)
@@ -186,4 +185,3 @@ if __name__ == "__main__":
         stats = predict(os.path.join(opt.model_path, opt.model_name_predict), opt.test_data_path, opt.result_path)
     result_stats_save(stats, opt.result_stats_path)
     print('===> Complete')
-
