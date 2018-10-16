@@ -85,17 +85,19 @@ optional arguments:
 ```
 
 ## Result(training for 100 epoches on 91 images, with upscaling factor 2):
-Peak signal-to-noise ratio (PSNR) comparison:
-
+### Peak signal-to-noise ratio (PSNR) comparison:
 |  Image | Low Resolution | High Resolution |
 |:------:|:--------------:|:---------------:|
 | comic  | 23.7955677227  | 26.0434704104   |
 | face   | 32.7865527256  | 33.9367435428   |
 | baboon | 23.1091089408  | 23.9472346226   |
 
-![comic](/uploads/f140eaddd2a92ea0b7fa4898ed831059/comic.png)  
-![face](/uploads/fa1de61e72fe25a246c42f503c4804cb/face.png)  
-![baboon](/uploads/9a52f805ca44e16948c1dbd0a79b8e84/baboon.png)
+### Visualization:
+![comic](/uploads/77e4cfcd8735acb23b044b9f4dcd7fdc/comic.png)
+
+![face](/uploads/dd7521d0d0e94cced8535a1325c81a22/face.png)
+
+![baboon](/uploads/933f4c906a1d20f9fec3d2fb50dcd8c0/baboon.png)
 
 License
 ----
