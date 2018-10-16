@@ -1,11 +1,9 @@
 *.DS_Store
 __pycache__/*
-logs/*
 other/*
 result/*
 reference/*
-checkpoint/*.pth
-result/area/*
 models/__pycache__/*
 utils/__pycache__/*
 .ipynb_checkpoints/*
+data/src/*
