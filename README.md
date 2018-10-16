@@ -3,10 +3,6 @@
 ## Model: SRCNN
 The original paper is [ECCV2014: Learning a Deep Convolutional Network for Image Super-Resolution](https://arxiv.org/abs/1501.00092)
 
-## Prequirements
-* Keras                              2.1.6
-* tensorflow-gpu                     1.8.0
-
 ## Structure of directory
 ### sub directory
 ```
@@ -32,18 +28,22 @@ geosr-keras
 * statistic contains statistic result such as PSNR for each test image
 * result contains obtained lr images, related sr images, and result comparison image
 
+## Prequirements
+* Keras                              2.1.6
+* tensorflow-gpu                     1.8.0
+
 ## Usage:
 ### Step 1: Data Preparation
-Create your own data directory, and prepare training and test dataset.
+Create your own data directory, and prepare training and test dataset.  
 `cd ./data`  
 `mkdir train test`
 
 ### Step 2: Conduct 
 #### Train and Test
-`python main.py --model_name_train model_name -t True -i 100 -u 2`
+`python main.py --model_name_train model_name -t True -i 10 -u 2`
 
 #### Test only
-`python main.py --model_name_predict model_name -t True -i 100 -u 2`
+`python main.py --model_name_predict model_name -t False -i 10 -u 2`
 
 ### Help
 ```
@@ -81,6 +81,7 @@ optional arguments:
                         super resolution upscale factor
 ```
 
-## Result(training for 200 epoches on 91 images, with upscaling factor 2):
-Results on Set5 dataset:
-sdaad
+## Result(training for 100 epoches on 91 images, with upscaling factor 2):
+![comic](/uploads/f140eaddd2a92ea0b7fa4898ed831059/comic.png)  
+![face](/uploads/fa1de61e72fe25a246c42f503c4804cb/face.png)  
+![baboon](/uploads/9a52f805ca44e16948c1dbd0a79b8e84/baboon.png)
