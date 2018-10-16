@@ -29,6 +29,7 @@ geosr-keras
 * result contains obtained lr images, related sr images, and result comparison image
 
 ## Prequirements
+* Python                             3.5.2
 * Keras                              2.1.6
 * tensorflow-gpu                     1.8.0
 
